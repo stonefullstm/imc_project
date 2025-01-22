@@ -10,10 +10,20 @@ void execute() {
   String nome = stdin.readLineSync(encoding: utf8) ?? "";
   print("Digite o peso da pessoa (kg):");
   var value = stdin.readLineSync(encoding: utf8) ?? "";
-  double peso = double.parse(value);
+  double peso = 0.0;
+  double altura = 0.0;
+  try {
+    peso = double.parse(value);
+  } catch (e) {
+    print("Valor do peso inválido");
+  }
   print("Digite a altura da pessoa (m):");
   value = stdin.readLineSync(encoding: utf8) ?? "";
-  double altura = double.parse(value);
+  try {
+    altura = double.parse(value);
+  } catch (e) {
+    print("Valor da altura inválido");
+  }
   Pessoa pessoa = Pessoa(nome, peso, altura);
   print(pessoa);  
 }
