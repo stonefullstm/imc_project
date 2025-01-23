@@ -11,4 +11,8 @@ void main() {
   test('Calcula e retorna o imc de uma pessoa', () {
     expect(Imc.calculateImc(Pessoa("João da Silva", 62, 1.7)), 21.45);
   });
+
+  test('Calcula o imc de uma pessoa e retorna o resultado', () {
+    expect(Imc.resultImc(Pessoa("João da Silva", 62, 1.7)), "Saudável");
+  });
 }
