@@ -2,7 +2,7 @@ import 'package:imc_project/classes/pessoa.dart';
 
 class Imc {
   static double calculateImc(Pessoa pessoa) {
-    return pessoa.getPeso() / (pessoa.getAltura() * pessoa.getAltura());   
+    return double.parse((pessoa.getPeso() / (pessoa.getAltura() * pessoa.getAltura())).toStringAsFixed(2));   
   }
 
   static String resultImc(Pessoa pessoa) {
