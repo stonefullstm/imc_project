@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:convert';
 
+import 'package:imc_project/classes/imc.dart';
 import 'package:imc_project/classes/pessoa.dart';
 
 void execute() {
@@ -25,5 +26,5 @@ void execute() {
     print("Valor da altura inválido");
   }
   Pessoa pessoa = Pessoa(nome, peso, altura);
-  print(pessoa);  
+  print(Imc.resultImc(pessoa));  
 }
